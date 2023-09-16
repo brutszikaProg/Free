@@ -1,0 +1,301 @@
+/* Estilos gerais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 0 15px 15px;
+}
+
+.container nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo ion-icon {
+    color: #79bccf;
+    font-size: 38px;
+}
+
+nav .logo h1 {
+    color: #444;
+    font-size: 28px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+    position: relative;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+nav ul li ::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #79bccf;
+    width: 0%;
+    height: 3px;
+    transition: 0.3s;
+}
+
+nav ul li:hover::after,
+nav ul li .active::after {
+    width: 100%;
+}
+
+nav ul li a {
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+.nav ul li .active a {
+    color: #79bccf;
+}
+
+.container .content {
+    width: 100%;
+    height: calc(100vh - 95px);
+    background: linear-gradient(130deg, #c4e1f8, #eeb0bd);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.content .div-text span {
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: bold;
+}
+
+.content .div-text h3 {
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-size: 50px;
+    font-weight: normal;
+    margin: 20px 0 8px;
+    color: #444;
+}
+
+.content .div-text h1 {
+    font-size: 55px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.content .div-text h2 {
+    color: #666;
+    font-size: 30px;
+    line-height: 14px;
+    letter-spacing: 1.8px;
+    margin-bottom: 55px;
+}
+
+.content .div-text .btn {
+    padding: 15px 35px;
+    background-color: #fff;
+    color: #79bccf;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+.content .div-text .btn:hover {
+    color: #fff;
+    background-color: #79bccf;
+}
+
+.content .div-img img {
+    width: 450px;
+}
+
+.content .small-img {
+    position: absolute;
+    left: 30%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}   
+
+.content .small-img img {
+    width: 80px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.content .small-img img:hover{
+    transform: scale(1.3);
+}
+
+/* Estilos para a seleção de tensão (127V e 220V) */
+.voltage-options {
+    margin-top: 20px;
+}
+
+.voltage-options label {
+    display: block;
+    font-size: 18px;
+    color: #444;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.voltage-options label.selected {
+    font-weight: bold;
+    color: #79bccf;
+}
+
+.voltage-options label:hover {
+    text-decoration: underline;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #79bccf;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: left 0.3s ease;
+}
+
+.voltage-options input[type="radio"][value="220v"]:checked ~ .indicator {
+    left: 50px;
+}
+
+/* Estilos para a seção de formulário de endereço */
+.address-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.address-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.address-form label {
+    font-weight: bold;
+    color: #444;
+}
+
+.address-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.address-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.address-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para a seção de checkout */
+.checkout-page {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-page h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.checkout-page label {
+    font-weight: bold;
+    color: #444;
+}
+
+.checkout-page input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.checkout-page button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-page button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+#continue-to-checkout {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Preenchimento interno do botão (ajuste conforme necessário) */
+    border: none; /* Remove a borda do botão */
+    border-radius: 3px; /* Borda arredondada */
+    font-size: 18px; /* Tamanho da fonte */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
+}
+
+#continue-to-checkout:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse sobre o botão */
+}
