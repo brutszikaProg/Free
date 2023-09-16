@@ -74,3 +74,13 @@ paymentForm.addEventListener('submit', function (event) {
 
     // Limpar os campos do formulário (você pode adicionar essa funcionalidade)
 });
+
+// Adiciona um ouvinte de eventos de clique a cada imagem da small-img
+let smallImages = smallImagesDiv.querySelectorAll('img');
+
+smallImages.forEach(function (image) {
+    image.addEventListener('click', function () {
+        // Atualiza a imagem grande com a imagem clicada
+        bigImage.src = image.src;
+    });
+});
