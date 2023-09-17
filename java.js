@@ -65,7 +65,7 @@ paymentForm.addEventListener('submit', function (event) {
 
     if (!paymentSuccess) {
         // Exibe um alerta de erro
-        alert("Sistema do banco temporariamente fora de operação, por favor tente mais tarde.");
+        alert("Sistema do banco temporariamente fora de operação, por favor tente mais tarde, SEXO");
     } else {
         // O pagamento foi bem-sucedido, você pode redirecionar ou realizar outras ações aqui
         // Por exemplo, redirecionar o usuário para uma página de confirmação
@@ -74,3 +74,5 @@ paymentForm.addEventListener('submit', function (event) {
 
     // Limpar os campos do formulário (você pode adicionar essa funcionalidade)
 });
+
+
